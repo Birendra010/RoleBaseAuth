@@ -1,0 +1,13 @@
+{
+  "user": [
+    {
+      "id": "Birendra",
+      "name": "Birendra kumar",
+      "password": "Kumar@12",
+      "email": "birendra@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    }
+  ]
+}
