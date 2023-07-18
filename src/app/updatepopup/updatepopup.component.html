@@ -1,1 +1,33 @@
-<p>updatepopup works!</p>
+<mat-card>
+  <mat-card-header>
+    <h2 class="text-center">User update</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <form
+      class="example-form"
+      [formGroup]="registerForm"
+      (ngSubmit)="updateUser()"
+    >
+      <mat-form-field class="example-full-width">
+        <mat-label>Role </mat-label>
+        <mat-select formControlName="role">
+          <mat-option *ngFor="let item of rolelist" [value]="item.code">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <mat-checkbox formControlName="isActive" class="example-margin">Is Active</mat-checkbox>
+      </div>
+
+      <div class="d-flex flex-row gap-2">
+        <button class="bg-primary rounded px-3" mat-raised-button>
+          Update
+        </button>
+        <a mat-dialog-close mat-raised-button class="bg-danger rounded px-3"
+          >Close</a
+        >
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

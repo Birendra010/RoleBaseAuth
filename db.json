@@ -8,6 +8,118 @@
       "gender": "male",
       "role": "admin",
       "isActive": true
+    },
+    {
+      "id": "aashu",
+      "name": "aashu Kumar",
+      "password": "Kumar@12",
+      "email": "aashu@gmail.com",
+      "gender": "male",
+      "role": "sales",
+      "isActive": true
+    },
+    {
+      "id": "manish",
+      "name": "manish kumar",
+      "password": "Kumar@12",
+      "email": "manish@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": true
+    },
+    {
+      "id": "prakash",
+      "name": "prakash kumar",
+      "password": "Kumar@12",
+      "email": "prakash@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "mantu",
+      "name": "mantu kumar",
+      "password": "Kumar@12",
+      "email": "mantu@gmail.com",
+      "gender": "male",
+      "role": "sales",
+      "isActive": false
+    },
+    {
+      "id": "chandan",
+      "name": "chandan kumar",
+      "password": "Kumar@12",
+      "email": "chandan@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": true
+    },
+    {
+      "id": "shiv",
+      "name": "shiv kumar",
+      "password": "Kumar@12",
+      "email": "shiv@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "Birendra1",
+      "name": "Birendra1 kumar",
+      "password": "Kumar@12",
+      "email": "birendra1@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": true
+    },
+    {
+      "id": "Birendra2",
+      "name": "Birendra2 kumar",
+      "password": "Kumar@12",
+      "email": "birendra2@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": true
+    },
+    {
+      "id": "Birendra3",
+      "name": "Birendra3 kumar",
+      "password": "Kumar@12",
+      "email": "birendra3@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": true
+    },
+    {
+      "id": "Birendra4",
+      "name": "Birendra4 kumar",
+      "password": "Kumar@12",
+      "email": "birendra4@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    }
+  ],
+  "role": [
+    {
+      "code": "hr",
+      "name": "HR"
+    },
+    {
+      "code": "sales",
+      "name": "Sales"
+    },
+    {
+      "code": "telecaller",
+      "name": "Telecaller"
+    },
+    {
+      "code": "tester",
+      "name": "Tester"
+    },
+    {
+      "code": "manager",
+      "name": "Manager"
     }
   ]
 }

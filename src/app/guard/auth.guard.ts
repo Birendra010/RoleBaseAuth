@@ -12,10 +12,17 @@ export const AuthGuard = (next:ActivatedRouteSnapshot) => {
 let value = inject(AuthService).isLoggedIn();
 
 return value ? true : createUrlTreeFromSnapshot(next,['/','login'])
+
+
 }
 
 
-
+// constructor(private userService:UserService,private loggerService:LoggerService,private router:Router)
+// {
+//   if (this.loggerService.isLoggedin || localStorage.getItem('token')) {
+//     this.router.navigate(['/'])
+//   }
+// }
 
 
 // import { inject } from '@angular/core';

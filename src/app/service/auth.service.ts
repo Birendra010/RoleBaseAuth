@@ -13,6 +13,16 @@ baseAPI='http://localhost:3000/user'
   getAll(){
     return this.http.get(this.baseAPI)
   }
+
+
+///get All Role Data
+getAllRole(){
+  return this.http.get("http://localhost:3000/role");
+}
+
+
+
+
 //get record by single id
   getById(id:any){
     return this.http.get(this.baseAPI+'/'+id);
