@@ -1,33 +1,27 @@
 <mat-card>
-    <mat-card-header>
-      <h2 class="text-center">User Login</h2>
-    </mat-card-header>
-    <mat-card-content>
-      <form
-        class="example-form"
-        [formGroup]="loginForm"
-        (ngSubmit)="login()"
-      >
-        <mat-form-field class="example-full-width">
-          <mat-label>Username</mat-label>
-          <input matInput formControlName="username">
-        </mat-form-field>
-  
-        
-        <mat-form-field class="example-full-width">
-          <mat-label>Password</mat-label>
-          <input matInput formControlName="password" />
-        </mat-form-field>
-  
-        <div class="d-flex flex-row gap-2">
-          <button class="bg-primary rounded px-3" mat-raised-button>
-            Submit
-          </button>
-          <a class="bg-danger bg-gradient rounded p-2" routerLink="/register"
-            >Back to Signup</a
-          >
-        </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
-  
+  <mat-card-header>
+    <h2 class="text-center">User Login</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" />
+      </mat-form-field>
+
+      <div class="d-flex flex-row gap-2">
+        <button class="bg-primary rounded px-3" mat-raised-button>
+          Submit
+        </button>
+        <a class="bg-danger bg-gradient rounded p-2" routerLink="/register"
+          >Back to Signup</a
+        >
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

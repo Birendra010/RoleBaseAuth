@@ -7,17 +7,14 @@ import { UserlistingComponent } from './userlisting/userlisting.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent,canActivate:[AuthGuard]},
-  {path:'register',component:RegisterComponent},
-  {path:'login',component:LoginComponent},
-  {path:'user',component:UserlistingComponent,canActivate:[AuthGuard]},
-
-
-
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'user', component: UserlistingComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

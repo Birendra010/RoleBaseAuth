@@ -1,61 +1,59 @@
+<h1 class="text-center">User Data</h1>
 
-<h1 class=" text-center">User Data</h1>
+<div matSort class="shadow border border-4">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <div matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>User Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </div>
 
-<div matSort  class="shadow border border-4 ">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 " >
+    <div matColumnDef="name">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </div>
 
+    <div matColumnDef="email">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+    </div>
 
-        <div matColumnDef="username">
-          <th mat-header-cell  *matHeaderCellDef> User Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-        </div>
-      
-     
-        <div matColumnDef="name" >
-          <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </div>
-      
-        
-        <div matColumnDef="email">
-          <th mat-header-cell mat-sort-header *matHeaderCellDef> Email </th>
-          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
-        </div>
-      
-        <div matColumnDef="status">
-            <th mat-header-cell *matHeaderCellDef> Status </th>
-            <td mat-cell *matCellDef="let element"> {{element.isActive ? 'Active':'In Active'}} </td>
-          </div>
-    
-        <div matColumnDef="role">
-          <th mat-header-cell *matHeaderCellDef> Role </th>
-          <td mat-cell *matCellDef="let element"> {{element.role === ''? 'Un Assigned':element.role}} </td>
-        </div>
-        button
-      
-    
-          <div matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef> Action </th>
-            <td mat-cell *matCellDef="let element">
-            <a *ngIf="element.role!='admin'" (click)="updateuser(element.id)" mat-raised-button class="bg-primary rounded px-3 py-2 ">Update</a>
-        </td>  
-        </div>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColums"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColums;"></tr>
-      </table>
-    
-      <mat-paginator [length]="100"
-                  [pageSize]="10"
-                  [pageSizeOptions]="[5, 10, 25, 100]"
-                  aria-label="Select page">
-    </mat-paginator>
-      
+    <div matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.isActive ? "Active" : "In Active" }}
+      </td>
+    </div>
+
+    <div matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef>Role</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.role === "" ? "Un Assigned" : element.role }}
+      </td>
+    </div>
+    button
+
+    <div matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <a
+          *ngIf="element.role != 'admin'"
+          (click)="updateuser(element.id)"
+          mat-raised-button
+          class="bg-primary rounded px-3 py-2"
+          >Update</a
+        >
+      </td>
+    </div>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColums"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColums"></tr>
+  </table>
+
+  <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page"
+  >
+  </mat-paginator>
 </div>
-
-  
-
-
-
-
-   

@@ -5,24 +5,24 @@ import { AuthService } from './service/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements DoCheck {
-  isMenuRequire =false;
-isAdmin=false;
+  isMenuRequire = false;
+  isAdmin = false;
   title = 'Auth';
 
-  constructor(private router:Router,private service:AuthService ){}
+  constructor(private router: Router, private service: AuthService) {}
   ngDoCheck(): void {
-    let currentUrl = this.router.url
-    if(currentUrl =='/login' || currentUrl == '/register'){
+    let currentUrl = this.router.url;
+    if (currentUrl == '/login' || currentUrl == '/register') {
       this.isMenuRequire = false;
-    }else{
-      this.isMenuRequire= true;
+    } else {
+      this.isMenuRequire = true;
     }
-    if(this.service.getUserRole()==='admin'){
+    if (this.service.getUserRole() === 'admin') {
       this.isAdmin = true;
-    }else{
+    } else {
       this.isAdmin = false;
     }
   }

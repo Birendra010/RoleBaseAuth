@@ -13,13 +13,6 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   userData: any;
 
-  // constructor(private userService:UserService,private loggerService:LoggerService,private router:Router)
-  // {
-  //   if (this.loggerService.isLoggedin || localStorage.getItem('token')) {
-  //     this.router.navigate(['/'])
-  //   }
-  // }
-
   constructor(
     private builder: FormBuilder,
     private toastr: ToastrService,
@@ -37,7 +30,6 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this.service.getById(this.loginForm.value.username).subscribe((res) => {
         this.userData = res;
-        // console.log(this.userData)
 
         if (this.userData.password === this.loginForm.value.password) {
           if (this.userData.isActive) {

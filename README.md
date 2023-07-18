@@ -30,11 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-npm install -g @angular/cli
-ng add @angular/material
-npm install npx-toastr -save
-npm install -g json-server
-json-server --watch db.json
+ ### npm install -g @angular/cli
+ ### ng add @angular/material
+ ### npm install npx-toastr -save
+ ### npm install -g json-server
+ ### json-server --watch db.json
 
 
 

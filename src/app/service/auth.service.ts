@@ -1,47 +1,43 @@
-import {  HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  baseAPI = 'http://localhost:3000/user';
 
-baseAPI='http://localhost:3000/user'
-
-  constructor(private http:HttpClient) { }
-//return All Data via get method
-  getAll(){
-    return this.http.get(this.baseAPI)
+  constructor(private http: HttpClient) {}
+  //return All Data via get method
+  getAll() {
+    return this.http.get(this.baseAPI);
   }
 
-
-///get All Role Data
-getAllRole(){
-  return this.http.get("http://localhost:3000/role");
-}
-
-
-
-
-//get record by single id
-  getById(id:any){
-    return this.http.get(this.baseAPI+'/'+id);
+  ///get All Role Data
+  getAllRole() {
+    return this.http.get('http://localhost:3000/role');
   }
-//register user via post method
-  registerData(inputdata:any){
-return this.http.post(this.baseAPI,inputdata)
-  }
-  //update user via put method 
-updateData(id:any,inputdata:any){
-  return this.http.put(this.baseAPI+'/'+id,inputdata)
-}
-//Get Username
-isLoggedIn(){
-  return sessionStorage.getItem('username')!=null
-}
-//Get User role
-getUserRole(){
-  return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():''; 
-}
 
+  //get record by single id
+  getById(id: any) {
+    return this.http.get(this.baseAPI + '/' + id);
+  }
+  //register user via post method
+  registerData(inputdata: any) {
+    return this.http.post(this.baseAPI, inputdata);
+  }
+  //update user via put method
+  updateData(id: any, inputdata: any) {
+    return this.http.put(this.baseAPI + '/' + id, inputdata);
+  }
+  //Get Username
+  isLoggedIn() {
+    return sessionStorage.getItem('username') != null;
+  }
+  //Get User role
+  getUserRole() {
+    return sessionStorage.getItem('role') != null
+      ? sessionStorage.getItem('role')?.toString()
+      : '';
+  }
 }
